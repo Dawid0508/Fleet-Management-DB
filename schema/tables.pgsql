@@ -116,3 +116,10 @@ CREATE TABLE Branches (
     BranchName VARCHAR(100) NOT NULL,
     Address VARCHAR(255)
 );
+
+
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'public';
+
+select * from Branches;

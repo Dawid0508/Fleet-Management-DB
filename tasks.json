@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Schema",
+            "type": "shell",
+            "command": "psql",
+            "args": [
+                "-U", "postgres",            // Użytkownik PostgreSQL
+                "-d", "fleet_management",   // Nazwa bazy danych
+                "-f", "${workspaceFolder}/schema/tables.pgsql"  // Ścieżka do pliku
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Insert Data",
+            "type": "shell",
+            "command": "psql",
+            "args": [
+                "-U", "postgres",
+                "-d", "fleet_management",
+                "-f", "${workspaceFolder}/data/insert_data.pgsql"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Triggers",
+            "type": "shell",
+            "command": "psql",
+            "args": [
+                "-U", "postgres",
+                "-d", "fleet_management",
+                "-f", "${workspaceFolder}/data/triggers.pgsql"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Functions",
+            "type": "shell",
+            "command": "psql",
+            "args": [
+                "-U", "postgres",
+                "-d", "fleet_management",
+                "-f", "${workspaceFolder}/queries/functions.pgsql"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Reports",
+            "type": "shell",
+            "command": "psql",
+            "args": [
+                "-U", "postgres",
+                "-d", "fleet_management",
+                "-f", "${workspaceFolder}/queries/reports.pgsql"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

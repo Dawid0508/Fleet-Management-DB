@@ -66,6 +66,15 @@
       "name": "localhost",
       "username": "postgres",
       "database": "postgres"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5434,
+      "driver": "PostgreSQL",
+      "database": "fleet_management",
+      "name": "localhost",
+      "username": "postgres"
     }
   ]
 }

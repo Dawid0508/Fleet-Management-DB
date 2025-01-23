@@ -1,7 +1,7 @@
--- Ograniczenia dla tabeli Vehicles
 ALTER TABLE Vehicles
-ADD CONSTRAINT chk_year CHECK (Year >= 1900 AND Year <= EXTRACT(YEAR FROM CURRENT_DATE)), -- Rok musi być realistyczny
-ADD CONSTRAINT chk_registration_length CHECK (CHAR_LENGTH(RegistrationNumber) BETWEEN 5 AND 15); -- Długość numeru rejestracyjnego
+ADD CONSTRAINT chk_year_static CHECK (Year >= 1900 AND Year <= 2100),
+ADD CONSTRAINT chk_registration_length CHECK (CHAR_LENGTH(RegistrationNumber) BETWEEN 5 AND 15);
+
 
 -- Ograniczenia dla tabeli Drivers
 ALTER TABLE Drivers

@@ -12,7 +12,7 @@ CREATE TABLE Vehicles (
     FOREIGN KEY (BranchID) REFERENCES Branches(BranchID)
 );
 
--- Tabela Drivers
+Tabela Drivers
 CREATE TABLE Drivers (
     DriverID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE MaintenanceSchedules (
     FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
 );
 
--- Tabela Companies
+Tabela Companies
 CREATE TABLE Companies (
     CompanyID SERIAL PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
@@ -118,8 +118,3 @@ CREATE TABLE Branches (
 );
 
 
-SELECT table_name
-FROM information_schema.tables
-WHERE table_schema = 'public';
-
-select * from Branches;

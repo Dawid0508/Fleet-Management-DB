@@ -4,15 +4,15 @@ Fleet-Management-DB/
 ├── schema/
 │   ├── tables.sql          # Definicje tabel
 │   ├── constraints.sql     # Klucze obce, unikalność itp.
-│   ├── indexes.sql         # Indeksy dla optymalizacji
 ├── data/
 │   ├── insert_data.sql     # Przykładowe dane testowe
 │   ├── triggers.sql        # Triggery do automatyzacji
+|   |-- procedures.sql      #procedury
 ├── queries/
 │   ├── reports.sql         # Zapytania do generowania raportów
 │   ├── functions.sql       # Funkcje i procedury składowane
 ├── README.md               # Opis projektu, instrukcja uruchomienia
-└── docker-compose.yml      # Opcjonalnie, do łatwego uruchamiania bazy
+
 
 Wymagania:
 - Rozbudowana funkcjonalność, w tym zaawansowane zapytania SQL (np. zapytania zagnieżdżone, widoki)
